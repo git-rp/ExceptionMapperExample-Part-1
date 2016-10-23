@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 
 
 @Path("/exp")
-public class Resource {
+public class ExpResource {
 
 	@GET	
 	@Path("outofbound")

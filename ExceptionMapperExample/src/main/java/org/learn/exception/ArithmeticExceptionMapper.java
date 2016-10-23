@@ -10,11 +10,11 @@ public class ArithmeticExceptionMapper implements ExceptionMapper<ArithmeticExce
 
     @Override
     public Response toResponse(ArithmeticException e) {
-        
+
         return Response
                 .status(Response.Status.INTERNAL_SERVER_ERROR.getStatusCode())
                 .type(MediaType.TEXT_PLAIN)
-                .entity("Catching in ArithmeticExceptionMapper : "+ e.getMessage())
+                .entity("Catching ArithmeticExceptionMapper : "+ e.getMessage())
                 .build();
     }
 }

@@ -8,11 +8,12 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class ApplicationExceptionMapper implements ExceptionMapper<Exception> {
 
+
     public Response toResponse(Exception e) {
         return Response
                 .status(Response.Status.INTERNAL_SERVER_ERROR.getStatusCode())
                 .type(MediaType.TEXT_PLAIN)
-                .entity("Catching in ApplicaitonExceptionMapper : " + e.getMessage())
+                .entity("Catching ApplicaitonExceptionMapper : " + e.getMessage())
                 .build();
     }
 }

@@ -10,11 +10,11 @@ public class NullPointerExceptionMapper implements ExceptionMapper<NullPointerEx
 
     @Override
     public Response toResponse(NullPointerException e) {
-        
+
         return Response
                 .status(Response.Status.INTERNAL_SERVER_ERROR.getStatusCode())
                 .type(MediaType.TEXT_PLAIN)
-                .entity("Catching in NullPointerExceptionMapper : "+ e.getMessage())
+                .entity("Catching NullPointerExceptionMapper : "+ e.getMessage())
                 .build();
     }
 }
